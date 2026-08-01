@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policies</title>
+<title>BlitzNest</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-         background: #f6f7fb; color: #1c2030; margin: 0; }
+         background: #f6f7fb; color: #1c2030; margin: 0; line-height: 1.6; }
   @media (prefers-color-scheme: dark) { body { background: #12141c; color: #dfe2ee; }
-    .card { background: #1a1d29 !important; box-shadow: none !important; } a { color: #7fb0ff !important; } }
-  .wrap { max-width: 560px; margin: 0 auto; padding: 48px 16px; }
+    .card { background: #1a1d29 !important; box-shadow: none !important; }
+    a { color: #7fb0ff !important; }
+    .badge { background: #232736 !important; color: #9aa3bd !important; } }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 48px 16px; }
   .card { background: #fff; border-radius: 14px; padding: 26px 30px; box-shadow: 0 2px 12px rgba(30,40,80,0.08); }
-  h1 { font-size: 1.4em; }
-  ul { line-height: 2; }
-  a { color: #2a5db0; font-weight: 600; }
+  h1 { font-size: 1.5em; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.05em; margin: 26px 0 10px; }
+  .tag { color: #6b7285; font-size: 0.92em; margin: 0; }
+  a { color: #2a5db0; font-weight: 600; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul.apps { list-style: none; padding: 0; margin: 0; }
+  ul.apps li { padding: 12px 0; border-bottom: 1px solid rgba(128,138,168,0.18); }
+  ul.apps li:last-child { border-bottom: none; }
+  .name { font-weight: 700; }
+  .desc { color: #6b7285; font-size: 0.92em; }
+  .badge { display: inline-block; background: #eef0f6; color: #6b7285; border-radius: 20px;
+           padding: 1px 9px; font-size: 0.78em; font-weight: 600; margin-left: 6px; vertical-align: 1px; }
+  .footer { text-align: center; color: #8b91a3; font-size: 0.85em; padding: 18px 0 24px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <div class="card">
-    <h1>Privacy Policies / Gizlilik Politikaları</h1>
-    <ul>
-      <li><a href="privacy/sortblitz.html">Sortblitz</a></li>
+    <h1>BlitzNest</h1>
+    <p class="tag">Bağımsız mobil oyun ve uygulama geliştiricisi &nbsp;·&nbsp; Independent mobile game &amp; app developer</p>
+
+    <h2>Uygulamalar / Apps</h2>
+    <ul class="apps">
+      <li>
+        <div class="name">Sortblitz</div>
+        <div class="desc">Renkli topları tüplere ayıran rahatlatıcı bir bulmaca oyunu. &nbsp;·&nbsp; A relaxing ball-sorting puzzle.</div>
+        <div><a href="privacy/sortblitz.html">Gizlilik Politikası / Privacy Policy</a></div>
+      </li>
+      <li>
+        <div class="name">Shotblitz <span class="badge">yakında / soon</span></div>
+        <div class="desc">Refleks tabanlı nişan alma oyunu. &nbsp;·&nbsp; A reflex-based shooting game.</div>
+      </li>
+      <li>
+        <div class="name">Tileblitz <span class="badge">yakında / soon</span></div>
+        <div class="desc">Sayı karolarını birleştiren bulmaca oyunu. &nbsp;·&nbsp; A number-merging tile puzzle.</div>
+      </li>
     </ul>
+
+    <h2>İletişim / Contact</h2>
+    <p><a href="mailto:blitznestlabs@gmail.com">blitznestlabs@gmail.com</a></p>
   </div>
+
+  <div class="footer">BlitzNest</div>
 </div>
 </body>
 </html>
