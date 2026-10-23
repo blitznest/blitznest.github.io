@@ -1,63 +1,172 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-lang="tr" data-title-tr="BlitzNest — Mobil oyunlar" data-title-en="BlitzNest — Mobile games">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BlitzNest</title>
+<title>BlitzNest — Mobil oyunlar</title>
 <meta name="google-site-verification" content="13mu_KbFc4jPfM5c9uCnH-Zp8knt_b65_aPZoEzAJV8" />
-<style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-         background: #f6f7fb; color: #1c2030; margin: 0; line-height: 1.6; }
-  @media (prefers-color-scheme: dark) { body { background: #12141c; color: #dfe2ee; }
-    .card { background: #1a1d29 !important; box-shadow: none !important; }
-    a { color: #7fb0ff !important; } }
-  .wrap { max-width: 620px; margin: 0 auto; padding: 48px 16px; }
-  .card { background: #fff; border-radius: 14px; padding: 26px 30px; box-shadow: 0 2px 12px rgba(30,40,80,0.08); }
-  h1 { font-size: 1.5em; margin: 0 0 4px; letter-spacing: -0.01em; }
-  h2 { font-size: 1.05em; margin: 26px 0 10px; }
-  .tag { color: #6b7285; font-size: 0.92em; margin: 0; }
-  a { color: #2a5db0; font-weight: 600; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  ul.apps { list-style: none; padding: 0; margin: 0; }
-  ul.apps li { padding: 12px 0; border-bottom: 1px solid rgba(128,138,168,0.18); }
-  ul.apps li:last-child { border-bottom: none; }
-  .name { font-weight: 700; }
-  .desc { color: #6b7285; font-size: 0.92em; }
-  .footer { text-align: center; color: #8b91a3; font-size: 0.85em; padding: 18px 0 24px; }
-</style>
+<meta name="description" content="BlitzNest: bağımsız mobil oyun geliştiricisi — Tileblitz, Sortblitz, Shotblitz, Trafficblitz. Independent mobile game developer.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1526" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
 </head>
 <body>
-<div class="wrap">
 
-  <div class="card">
-    <h1>BlitzNest</h1>
-    <p class="tag">Bağımsız mobil oyun ve uygulama geliştiricisi &nbsp;·&nbsp; Independent mobile game &amp; app developer</p>
-
-    <h2>Uygulamalar / Apps</h2>
-    <ul class="apps">
-      <li>
-        <div class="name">Sortblitz</div>
-        <div class="desc">Renkli topları tüplere ayıran rahatlatıcı bir bulmaca oyunu. &nbsp;·&nbsp; A relaxing ball-sorting puzzle.</div>
-        <div><a href="privacy/sortblitz.html">Gizlilik Politikası / Privacy Policy</a></div>
-      </li>
-      <li>
-        <div class="name">Shotblitz</div>
-        <div class="desc">Tek elle oynanan dikey uzay atış oyunu. &nbsp;·&nbsp; A one-handed vertical space shooter.</div>
-        <div><a href="privacy/shotblitz.html">Gizlilik Politikası / Privacy Policy</a></div>
-      </li>
-      <li>
-        <div class="name">Tileblitz</div>
-        <div class="desc">Dört oyun modlu 2048 bulmacası. &nbsp;·&nbsp; A 2048 puzzle with four game modes.</div>
-        <div><a href="privacy/tileblitz.html">Gizlilik Politikası / Privacy Policy</a></div>
-      </li>
-    </ul>
-
-    <h2>İletişim / Contact</h2>
-    <p><a href="mailto:blitznestlabs@gmail.com">blitznestlabs@gmail.com</a></p>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="./" aria-label="BlitzNest">
+      <picture>
+        <source srcset="assets/mark-dark.svg" media="(prefers-color-scheme: dark)">
+        <img src="assets/mark.svg" width="38" height="34" alt="">
+      </picture>
+    </a>
+    <button class="lang-btn" id="lang-btn" type="button" hidden>EN</button>
   </div>
+</header>
 
-  <div class="footer">BlitzNest</div>
-</div>
+<main>
+  <section class="hero">
+    <div class="container">
+      <picture>
+        <source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)">
+        <img class="hero-logo" src="assets/logo.svg" width="395" height="108" alt="BlitzNest">
+      </picture>
+      <h1><span lang="tr">Kısa molalara sığan mobil oyunlar</span><span lang="en">Mobile games that fit a short break</span></h1>
+      <p class="lead"><span lang="tr">BlitzNest, Android için bulmaca ve aksiyon oyunları yapan bağımsız bir geliştirici.</span><span lang="en">BlitzNest is an independent developer making puzzle and action games for Android.</span></p>
+      <div class="hero-actions">
+        <a class="btn" href="#oyunlar"><span lang="tr">Oyunlara göz at</span><span lang="en">See the games</span></a>
+        <a class="btn ghost" href="mailto:blitznestlabs@gmail.com"><span lang="tr">İletişim</span><span lang="en">Contact</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="oyunlar" aria-labelledby="games-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="games-title"><span lang="tr">Oyunlar</span><span lang="en">Games</span></h2>
+        <p><span lang="tr">Her oyunun gizlilik politikası kartında.</span><span lang="en">Each game’s privacy policy is linked on its card.</span></p>
+      </div>
+      <div class="games">
+      <article class="game" data-game="tileblitz" aria-labelledby="g-tileblitz">
+        <div class="game-head">
+          <img class="game-icon" src="assets/img/tileblitz-icon.webp" width="72" height="72" alt="">
+          <div>
+            <h3 id="g-tileblitz">Tileblitz</h3>
+            <span class="status live"><span lang="tr">Google Play’de</span><span lang="en">On Google Play</span></span>
+          </div>
+        </div>
+        <p class="desc"><span lang="tr">Dört oyun modlu 2048 bulmacası: klasik ızgaradan kule ve fırtına modlarına.</span><span lang="en">A 2048 puzzle with four game modes, from the classic grid to tower and storm.</span></p>
+        <ul class="shots">
+          <li><img lang="tr" src="assets/img/tileblitz-tr-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Klasik 2048 ekran görüntüsü"><img lang="en" src="assets/img/tileblitz-en-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Classic 2048 screenshot"></li>
+          <li><img lang="tr" src="assets/img/tileblitz-tr-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Kule modu ekran görüntüsü"><img lang="en" src="assets/img/tileblitz-en-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Tower mode screenshot"></li>
+          <li><img lang="tr" src="assets/img/tileblitz-tr-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Fırtına modu ekran görüntüsü"><img lang="en" src="assets/img/tileblitz-en-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Tileblitz: Storm mode screenshot"></li>
+        </ul>
+        <div class="game-actions">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.tileblitz.game" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.6v10.8c0 .5.5.8.9.5l8.4-5.4c.4-.2.4-.8 0-1L4.9 2.1c-.4-.3-.9 0-.9.5z"/></svg><span lang="tr">Google Play’de aç</span><span lang="en">Open on Google Play</span></a>
+          <a class="btn ghost" href="privacy/tileblitz.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M8 1.8 2.8 3.7v4c0 3.1 2.2 5.6 5.2 6.5 3-.9 5.2-3.4 5.2-6.5v-4z"/></svg><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </article>
+      <article class="game" data-game="sortblitz" aria-labelledby="g-sortblitz">
+        <div class="game-head">
+          <img class="game-icon" src="assets/img/sortblitz-icon.webp" width="72" height="72" alt="">
+          <div>
+            <h3 id="g-sortblitz">Sortblitz</h3>
+            <span class="status live"><span lang="tr">Google Play’de</span><span lang="en">On Google Play</span></span>
+          </div>
+        </div>
+        <p class="desc"><span lang="tr">Renkli topları tüplere ayıran rahatlatıcı bir bulmaca oyunu.</span><span lang="en">A relaxing ball-sorting puzzle.</span></p>
+        <ul class="shots">
+          <li><img lang="tr" src="assets/img/sortblitz-tr-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Topları ayırma ekran görüntüsü"><img lang="en" src="assets/img/sortblitz-en-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Sorting balls screenshot"></li>
+          <li><img lang="tr" src="assets/img/sortblitz-tr-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Sıvı toplar ekran görüntüsü"><img lang="en" src="assets/img/sortblitz-en-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Liquid balls screenshot"></li>
+          <li><img lang="tr" src="assets/img/sortblitz-tr-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Farklı mekanikler ekran görüntüsü"><img lang="en" src="assets/img/sortblitz-en-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Sortblitz: Different mechanics screenshot"></li>
+        </ul>
+        <div class="game-actions">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.sortblitz.game" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.6v10.8c0 .5.5.8.9.5l8.4-5.4c.4-.2.4-.8 0-1L4.9 2.1c-.4-.3-.9 0-.9.5z"/></svg><span lang="tr">Google Play’de aç</span><span lang="en">Open on Google Play</span></a>
+          <a class="btn ghost" href="privacy/sortblitz.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M8 1.8 2.8 3.7v4c0 3.1 2.2 5.6 5.2 6.5 3-.9 5.2-3.4 5.2-6.5v-4z"/></svg><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </article>
+      <article class="game" data-game="shotblitz" aria-labelledby="g-shotblitz">
+        <div class="game-head">
+          <img class="game-icon" src="assets/img/shotblitz-icon.webp" width="72" height="72" alt="">
+          <div>
+            <h3 id="g-shotblitz">Shotblitz</h3>
+            <span class="status live"><span lang="tr">Google Play’de</span><span lang="en">On Google Play</span></span>
+          </div>
+        </div>
+        <p class="desc"><span lang="tr">Tek elle oynanan dikey uzay atış oyunu.</span><span lang="en">A one-handed vertical space shooter.</span></p>
+        <ul class="shots">
+          <li><img lang="tr" src="assets/img/shotblitz-tr-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Uzay savaşı ekran görüntüsü"><img lang="en" src="assets/img/shotblitz-en-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Space combat screenshot"></li>
+          <li><img lang="tr" src="assets/img/shotblitz-tr-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Boss savaşı ekran görüntüsü"><img lang="en" src="assets/img/shotblitz-en-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Boss fight screenshot"></li>
+          <li><img lang="tr" src="assets/img/shotblitz-tr-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Güçlendirmeler ekran görüntüsü"><img lang="en" src="assets/img/shotblitz-en-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Shotblitz: Power-ups screenshot"></li>
+        </ul>
+        <div class="game-actions">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.shotblitz.game" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.6v10.8c0 .5.5.8.9.5l8.4-5.4c.4-.2.4-.8 0-1L4.9 2.1c-.4-.3-.9 0-.9.5z"/></svg><span lang="tr">Google Play’de aç</span><span lang="en">Open on Google Play</span></a>
+          <a class="btn ghost" href="privacy/shotblitz.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M8 1.8 2.8 3.7v4c0 3.1 2.2 5.6 5.2 6.5 3-.9 5.2-3.4 5.2-6.5v-4z"/></svg><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </article>
+      <article class="game" data-game="trafficblitz" aria-labelledby="g-trafficblitz">
+        <div class="game-head">
+          <img class="game-icon" src="assets/img/trafficblitz-icon.webp" width="72" height="72" alt="">
+          <div>
+            <h3 id="g-trafficblitz">Trafficblitz</h3>
+            <span class="status soon"><span lang="tr">Yakında</span><span lang="en">Coming soon</span></span>
+          </div>
+        </div>
+        <p class="desc"><span lang="tr">Otobüsleri doğru sırayla çıkar, yolcuları renklerine göre bindir.</span><span lang="en">Move the buses out in the right order and board passengers by colour.</span></p>
+        <ul class="shots">
+          <li><img lang="tr" src="assets/img/trafficblitz-tr-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Otobüs bulmacası ekran görüntüsü"><img lang="en" src="assets/img/trafficblitz-en-1.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Bus puzzle screenshot"></li>
+          <li><img lang="tr" src="assets/img/trafficblitz-tr-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Terminal inşası ekran görüntüsü"><img lang="en" src="assets/img/trafficblitz-en-2.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Building the terminal screenshot"></li>
+          <li><img lang="tr" src="assets/img/trafficblitz-tr-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Neon ışıklar ekran görüntüsü"><img lang="en" src="assets/img/trafficblitz-en-3.webp" width="320" height="569" loading="lazy" decoding="async" alt="Trafficblitz: Neon lights screenshot"></li>
+        </ul>
+        <div class="game-actions">
+          <span class="note"><span lang="tr">Yakında Google Play’de.</span><span lang="en">Coming soon to Google Play.</span></span>
+          <a class="btn ghost" href="privacy/trafficblitz.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M8 1.8 2.8 3.7v4c0 3.1 2.2 5.6 5.2 6.5 3-.9 5.2-3.4 5.2-6.5v-4z"/></svg><span lang="tr">Gizlilik politikası</span><span lang="en">Privacy policy</span></a>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="iletisim" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact">
+        <div class="contact-text">
+          <picture>
+            <source srcset="assets/mark-dark.svg" media="(prefers-color-scheme: dark)">
+            <img class="mark" src="assets/mark.svg" width="64" height="57" alt="">
+          </picture>
+          <div>
+            <h2 id="contact-title"><span lang="tr">İletişim</span><span lang="en">Contact</span></h2>
+            <p><span lang="tr">Soru, öneri ve veri talepleri için e-posta gönderin.</span><span lang="en">E-mail us with questions, feedback or data requests.</span></p>
+          </div>
+        </div>
+        <a class="btn" href="mailto:blitznestlabs@gmail.com">blitznestlabs@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav aria-labelledby="pp-title">
+      <h2 id="pp-title"><span lang="tr">Gizlilik politikaları</span><span lang="en">Privacy policies</span></h2>
+      <ul>
+          <li><a href="privacy/tileblitz.html">Tileblitz</a></li>
+          <li><a href="privacy/sortblitz.html">Sortblitz</a></li>
+          <li><a href="privacy/shotblitz.html">Shotblitz</a></li>
+          <li><a href="privacy/trafficblitz.html">Trafficblitz</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="mailto:blitznestlabs@gmail.com">blitznestlabs@gmail.com</a>
+      <small>© 2026 BlitzNest</small>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
