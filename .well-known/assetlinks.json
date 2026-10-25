@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.trafficblitz.game",
+      "sha256_cert_fingerprints": [
+        "5E:BF:C8:4C:B3:EC:11:5D:BB:23:5B:A4:FB:80:D8:E0:29:9A:0B:49:13:7B:AC:0E:E2:25:A4:5D:59:5A:56:9B",
+        "1A:E9:12:59:35:AE:E6:47:9B:19:B4:3A:8C:EA:CD:DE:E2:46:47:F5:F6:D2:A9:07:56:E3:F7:65:10:9C:48:15",
+        "39:2C:00:AE:7C:4F:54:9C:3E:66:C6:7A:D2:69:DA:EE:7A:DC:0F:27:B1:A3:28:92:DC:61:DF:38:94:2B:3C:35"
+      ]
+    }
+  }
+]

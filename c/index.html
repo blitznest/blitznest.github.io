@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Trafficblitz - Meydan okuma</title>
+<!-- ARGE #33 meydan okuma sayfasi (Assets/Scripts/Meta/Challenge.cs). Cerez, analitik, dis kaynak YOK; sorgu yalniz bu sayfada okunur. -->
+<style>
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #2a1f4f; color: #fff; text-align: center; }
+  .card { max-width: 420px; margin: 48px auto; padding: 28px 22px; background: #4a3aa8; border-radius: 28px; box-shadow: 0 10px 0 #2d2370; }
+  h1 { margin: 0 0 8px; font-size: 30px; color: #ffd84a; }
+  p { font-size: 19px; line-height: 1.45; margin: 12px 0; }
+  .score { font-size: 22px; font-weight: 700; background: #2d2370; border-radius: 18px; padding: 12px; }
+  a.btn { display: block; margin: 16px 0 0; padding: 16px; border-radius: 20px; font-size: 21px; font-weight: 800; text-decoration: none; color: #fff; }
+  .play { background: #34b84a; box-shadow: 0 6px 0 #1f7a2e; }
+  .store { background: #ff8a1f; box-shadow: 0 6px 0 #b85800; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1 id="t">Trafficblitz</h1>
+  <p id="what">Arkadaşın sana meydan okuyor!</p>
+  <p class="score" id="score"></p>
+  <a class="btn play" id="open" href="#">OYUNDA AÇ</a>
+  <a class="btn store" id="store" href="https://play.google.com/store/apps/details?id=com.trafficblitz.game">GOOGLE PLAY'DEN İNDİR</a>
+</div>
+<script>
+(function () {
+  var q = location.search.replace(/^\?/, "");
+  var p = {}; q.split("&").forEach(function (kv) { var i = kv.indexOf("="); if (i > 0) p[kv.slice(0, i)] = kv.slice(i + 1); });
+  function n(k) { var v = parseInt(p[k], 10); return isNaN(v) || v < 0 ? null : v; }
+  var tr = (navigator.language || "tr").toLowerCase().indexOf("tr") === 0;
+  var l = n("l"), d = n("d"), b = n("b") || 0, pw = n("p") || 0, t = n("t") || 0;
+  var clock = Math.floor(t / 60) + ":" + ("0" + (t % 60)).slice(-2);
+  var what = l !== null ? (tr ? l + ". seviye" : "Level " + l) : d !== null ? (tr ? "Günün bulmacası" : "Daily puzzle") : null;
+  if (!tr) { document.documentElement.lang = "en"; document.getElementById("open").textContent = "OPEN IN GAME"; document.getElementById("store").textContent = "GET IT ON GOOGLE PLAY"; }
+  if (what === null) { document.getElementById("what").textContent = tr ? "Trafficblitz'i Google Play'den indir." : "Get Trafficblitz on Google Play."; document.getElementById("open").style.display = "none"; return; }
+  document.getElementById("what").textContent = tr ? "Arkadaşın sana meydan okuyor: " + what : "Your friend challenges you: " + what;
+  document.getElementById("score").textContent = tr ? b + " çarpma · " + pw + " güç · " + clock : b + " bumps · " + pw + " powers · " + clock;
+  var clean = (l !== null ? "l=" + l : "d=" + d) + "&b=" + b + "&p=" + pw + "&t=" + t + (n("v") !== null ? "&v=" + n("v") : "");
+  var store = "https://play.google.com/store/apps/details?id=com.trafficblitz.game";
+  document.getElementById("open").href = "intent://c?" + clean + "#Intent;scheme=trafficblitz;package=com.trafficblitz.game;S.browser_fallback_url=" + encodeURIComponent(store) + ";end";
+})();
+</script>
+</body>
+</html>
