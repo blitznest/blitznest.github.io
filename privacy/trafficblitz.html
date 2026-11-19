@@ -44,9 +44,11 @@
       <li><strong>Player ID</strong> — a random identifier created by Google Firebase Authentication (anonymous), or the identifier of your Google Play Games account if you sign in.</li>
       <li><strong>Game progress</strong> — current level, coin balance, power-up counts, stars per level, daily reward state and the time of the last update. It is used only to save your progress and to prevent cheating.</li>
       <li><strong>Play Games data</strong> (if you sign in) — your Play Games profile name and avatar are shown by Google; your saved game and leaderboard scores (highest level, total stars) are stored by Google Play Games Services.</li>
+      <li><strong>Weekly Route feedback</strong> (optional) — if you rate a weekly route, your vote is stored with your player ID so it is counted once.</li>
+      <li><strong>Remote game settings</strong> — the game downloads game-balance settings from Google Firebase Remote Config; this only involves standard technical information (app and system version, language, country), not personal details.</li>
       <li>Settings (sound, music, vibration) and ad frequency counters are stored <strong>only on your device</strong>.</li>
     </ul>
-    <p>Progress data is stored in Google Cloud Firestore (Europe region) and processed by Google on our behalf. We do not sell or share it.</p>
+    <p>Progress data is stored in Google Cloud Firestore (Europe region) and processed by Google on our behalf. We do not sell or share it. Your game record and votes are kept for as long as you use the game, until you ask us to delete them; purchase records are kept as long as needed to prevent fraud and meet legal obligations.</p>
 
     <h2>In-app purchases</h2>
     <p>The game offers optional gold packs. Payment is handled entirely by <strong>Google Play</strong> under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; we never see your card or payment details. To deliver the gold once and prevent fraud, the game stores a purchase record in Google Cloud Firestore linked to your player ID: the Google Play purchase token, the pack purchased, the amount of gold and the time of purchase. Refunds and purchase history are managed in your Google Play account.</p>
@@ -76,7 +78,7 @@
       <li><strong>Approximate location</strong> (country/city level), derived by Google from a masked IP address</li>
       <li><strong>Device information</strong> (model, OS version, language, app version) and session information (first open, session start)</li>
     </ul>
-    <p>We have <strong>turned off</strong> the collection of the Advertising ID and ad personalization signals in Analytics, and we never send your name, e-mail address, Play Games name or any free text. Analytics data is not used for advertising and is not sold. In the EEA/UK, analytics storage follows your choice in the consent dialog (Google Consent Mode). Data is processed by Google on our behalf under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and kept for up to 14 months in Google Analytics. Uninstalling the game resets the app instance ID.</p>
+    <p>We have <strong>turned off</strong> the collection of the Advertising ID and ad personalization signals in Analytics, and we never send your name, e-mail address, Play Games name or any free text. Analytics data is not used for advertising and is not sold. In the EEA/UK, analytics storage follows your choice in the consent dialog (Google Consent Mode). Data is processed by Google on our behalf under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and kept for up to 14 months in Google Analytics. For our own analysis, a copy of these events may be exported to Google BigQuery (Europe region), where it is kept for up to 60 days. Uninstalling the game resets the app instance ID.</p>
 
     <h2>Your choices and consent</h2>
     <ul>
@@ -123,9 +125,11 @@
       <li><strong>Oyuncu kimliği</strong> — Google Firebase Authentication'ın oluşturduğu rastgele (anonim) bir tanımlayıcı ya da giriş yaparsanız Google Play Games hesabınızın tanımlayıcısı.</li>
       <li><strong>Oyun ilerlemesi</strong> — mevcut seviye, altın bakiyesi, özel güç sayıları, seviye başına yıldızlar, günlük ödül durumu ve son güncelleme zamanı. Yalnızca ilerlemenizi kaydetmek ve hileyi önlemek için kullanılır.</li>
       <li><strong>Play Games verileri</strong> (giriş yaparsanız) — Play Games profil adınız ve avatarınız Google tarafından gösterilir; kayıtlı oyununuz ve sıralama puanlarınız (en yüksek seviye, toplam yıldız) Google Play Oyun Hizmetleri'nde saklanır.</li>
+      <li><strong>Haftanın Rotası geri bildirimi</strong> (isteğe bağlı) — bir haftalık rotayı oylarsanız oyunuz, bir kez sayılması için oyuncu kimliğinizle birlikte saklanır.</li>
+      <li><strong>Uzaktan oyun ayarları</strong> — oyun, oyun dengesi ayarlarını Google Firebase Remote Config üzerinden indirir; bu yalnızca standart teknik bilgileri (uygulama ve sistem sürümü, dil, ülke) içerir, kişisel bilgi içermez.</li>
       <li>Ayarlar (ses, müzik, titreşim) ve reklam sıklığı sayaçları <strong>yalnızca cihazınızda</strong> tutulur.</li>
     </ul>
-    <p>İlerleme verileri Google Cloud Firestore'da (Avrupa bölgesi) saklanır ve bizim adımıza Google tarafından işlenir. Bu verileri satmaz veya paylaşmayız.</p>
+    <p>İlerleme verileri Google Cloud Firestore'da (Avrupa bölgesi) saklanır ve bizim adımıza Google tarafından işlenir. Bu verileri satmaz veya paylaşmayız. Oyun kaydınız ve oylarınız, oyunu kullandığınız sürece, silinmesini isteyene kadar saklanır; satın alma kayıtları sahtekârlığın önlenmesi ve yasal yükümlülükler için gerektiği süre boyunca tutulur.</p>
 
     <h2>Uygulama içi satın almalar</h2>
     <p>Oyunda isteğe bağlı altın paketleri vardır. Ödeme tümüyle <strong>Google Play</strong> tarafından, <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a> kapsamında yapılır; kart veya ödeme bilgilerinizi hiçbir zaman görmeyiz. Altının bir kez teslim edilmesi ve sahtekârlığın önlenmesi için oyun, oyuncu kimliğinize bağlı bir satın alma kaydını Google Cloud Firestore'da saklar: Google Play satın alma numarası (token), alınan paket, altın miktarı ve satın alma zamanı. İadeler ve satın alma geçmişi Google Play hesabınızdan yönetilir.</p>
@@ -155,7 +159,7 @@
       <li><strong>Yaklaşık konum</strong> (ülke/şehir düzeyi), Google tarafından maskelenmiş IP adresinden çıkarılır</li>
       <li><strong>Cihaz bilgileri</strong> (model, işletim sistemi sürümü, dil, uygulama sürümü) ve oturum bilgileri (ilk açılış, oturum başlangıcı)</li>
     </ul>
-    <p>Analytics'te Reklam Kimliği ve reklam kişiselleştirme sinyallerinin toplanmasını <strong>kapattık</strong>; adınızı, e-posta adresinizi, Play Games adınızı veya herhangi bir serbest metni asla göndermeyiz. Analitik veriler reklam için kullanılmaz ve satılmaz. AEA/Birleşik Krallık'ta analitik depolama, rıza penceresindeki seçiminize uyar (Google Consent Mode). Veriler bizim adımıza Google tarafından <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a> kapsamında işlenir ve Google Analytics'te en çok 14 ay tutulur. Oyunu kaldırmak uygulama kurulum kimliğini sıfırlar.</p>
+    <p>Analytics'te Reklam Kimliği ve reklam kişiselleştirme sinyallerinin toplanmasını <strong>kapattık</strong>; adınızı, e-posta adresinizi, Play Games adınızı veya herhangi bir serbest metni asla göndermeyiz. Analitik veriler reklam için kullanılmaz ve satılmaz. AEA/Birleşik Krallık'ta analitik depolama, rıza penceresindeki seçiminize uyar (Google Consent Mode). Veriler bizim adımıza Google tarafından <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a> kapsamında işlenir ve Google Analytics'te en çok 14 ay tutulur. Kendi analizimiz için bu olayların bir kopyası Google BigQuery'ye (Avrupa bölgesi) aktarılabilir ve orada en çok 60 gün tutulur. Oyunu kaldırmak uygulama kurulum kimliğini sıfırlar.</p>
 
     <h2>Seçenekleriniz ve rıza</h2>
     <ul>
