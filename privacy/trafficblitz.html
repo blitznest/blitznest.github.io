@@ -36,7 +36,7 @@
       <li>To keep your progress safe and the game fair, the game stores a small <strong>game progress record</strong> (level, coins, power-ups, stars) on Google Firebase, linked to a random player ID.</li>
       <li>You can sign in with <strong>Google Play Games</strong> (optional) to keep your progress across devices and appear on leaderboards.</li>
       <li>The game shows ads through <strong>Google AdMob</strong>. The AdMob SDK may process certain data (described below) to serve and measure ads.</li>
-      <li>Optional <strong>in-app purchases</strong> (gold packs) are paid through Google Play (see below). No analytics SDK, no social media integration. We never ask for your name, e-mail address or phone number.</li>
+      <li>Optional <strong>in-app purchases</strong> (gold packs) are paid through Google Play (see below). Gameplay analytics via <strong>Google Analytics for Firebase</strong> (from version 1.0.11, no Advertising ID). No social media integration. We never ask for your name, e-mail address or phone number.</li>
     </ul>
 
     <h2>Data the game stores</h2>
@@ -68,9 +68,19 @@
     </ul>
     <p>We only see aggregated, anonymous ad reports (e.g. total ad views).</p>
 
+
+    <h2>Gameplay analytics (Google Analytics for Firebase)</h2>
+    <p>Starting with version 1.0.11, the game uses <strong>Google Analytics for Firebase</strong> (Google LLC) to understand how the game is played, so that we can find levels that are too hard, fix confusing screens and improve the game. It records gameplay events such as levels started, won, lost or left, power-ups and features used, screens opened, tutorial steps, ad offers accepted and in-app purchases, together with:</p>
+    <ul>
+      <li><strong>App instance ID</strong> — a random identifier created by Firebase for this installation (not your name or account)</li>
+      <li><strong>Approximate location</strong> (country/city level), derived by Google from a masked IP address</li>
+      <li><strong>Device information</strong> (model, OS version, language, app version) and session information (first open, session start)</li>
+    </ul>
+    <p>We have <strong>turned off</strong> the collection of the Advertising ID and ad personalization signals in Analytics, and we never send your name, e-mail address, Play Games name or any free text. Analytics data is not used for advertising and is not sold. In the EEA/UK, analytics storage follows your choice in the consent dialog (Google Consent Mode). Data is processed by Google on our behalf under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and kept for up to 14 months in Google Analytics. Uninstalling the game resets the app instance ID.</p>
+
     <h2>Your choices and consent</h2>
     <ul>
-      <li><strong>EEA/UK users:</strong> on first launch a consent dialog (Google User Messaging Platform) lets you choose whether personalized ads may be shown, as required by GDPR.</li>
+      <li><strong>EEA/UK users:</strong> on first launch a consent dialog (Google User Messaging Platform) lets you choose whether personalized ads may be shown and whether analytics data may be stored, as required by GDPR.</li>
       <li><strong>All users:</strong> you can reset or delete your Advertising ID and opt out of ad personalization in Android Settings → Privacy → Ads.</li>
       <li>Signing in with Play Games is optional; the game can be played without it.</li>
       <li>Ads in this game are restricted to a <strong>general-audience content rating (G)</strong>.</li>
@@ -81,7 +91,7 @@
 
     <h2>Permissions</h2>
     <ul>
-      <li><strong>Internet / Network state</strong> — to save progress and load ads.</li>
+      <li><strong>Internet / Network state</strong> — to save progress, load ads and send gameplay analytics.</li>
       <li><strong>Vibrate</strong> — haptic feedback during gameplay.</li>
       <li><strong>Advertising ID</strong> — used by AdMob as described above.</li>
     </ul>
@@ -105,7 +115,7 @@
       <li>İlerlemenizi güvende ve oyunu adil tutmak için oyun, rastgele bir oyuncu kimliğine bağlı küçük bir <strong>oyun ilerleme kaydını</strong> (seviye, altın, özel güçler, yıldızlar) Google Firebase'de saklar.</li>
       <li>İsterseniz <strong>Google Play Games</strong> ile giriş yaparak ilerlemenizi cihazlar arasında koruyabilir ve sıralama tablolarında yer alabilirsiniz (isteğe bağlı).</li>
       <li>Oyun, <strong>Google AdMob</strong> aracılığıyla reklam gösterir. AdMob SDK'sı, reklam sunmak ve ölçmek için aşağıda açıklanan verileri işleyebilir.</li>
-      <li>İsteğe bağlı <strong>uygulama içi satın almalar</strong> (altın paketleri) Google Play üzerinden ödenir (aşağıya bakın). Analitik SDK yok, sosyal medya entegrasyonu yok. Adınızı, e-posta adresinizi veya telefon numaranızı asla istemeyiz.</li>
+      <li>İsteğe bağlı <strong>uygulama içi satın almalar</strong> (altın paketleri) Google Play üzerinden ödenir (aşağıya bakın). <strong>Google Analytics for Firebase</strong> ile oyun analitiği (1.0.11'den itibaren, Reklam Kimliği olmadan). Sosyal medya entegrasyonu yok. Adınızı, e-posta adresinizi veya telefon numaranızı asla istemeyiz.</li>
     </ul>
 
     <h2>Oyunun sakladığı veriler</h2>
@@ -137,9 +147,19 @@
     </ul>
     <p>Reklamlarla ilgili yalnızca toplu ve anonim raporlar görürüz (ör. toplam reklam gösterimi).</p>
 
+
+    <h2>Oyun analitiği (Google Analytics for Firebase)</h2>
+    <p>1.0.11 sürümünden itibaren oyun, nasıl oynandığını anlamak için <strong>Google Analytics for Firebase</strong> (Google LLC) kullanır; böylece fazla zor seviyeleri bulup kafa karıştıran ekranları düzeltir ve oyunu iyileştiririz. Başlanan, kazanılan, kaybedilen veya yarıda bırakılan seviyeler, kullanılan özel güçler ve özellikler, açılan ekranlar, eğitim adımları, kabul edilen reklam teklifleri ve uygulama içi satın almalar gibi oyun olayları şu bilgilerle birlikte kaydedilir:</p>
+    <ul>
+      <li><strong>Uygulama kurulum kimliği</strong> — Firebase'in bu kurulum için oluşturduğu rastgele bir tanımlayıcı (adınız veya hesabınız değildir)</li>
+      <li><strong>Yaklaşık konum</strong> (ülke/şehir düzeyi), Google tarafından maskelenmiş IP adresinden çıkarılır</li>
+      <li><strong>Cihaz bilgileri</strong> (model, işletim sistemi sürümü, dil, uygulama sürümü) ve oturum bilgileri (ilk açılış, oturum başlangıcı)</li>
+    </ul>
+    <p>Analytics'te Reklam Kimliği ve reklam kişiselleştirme sinyallerinin toplanmasını <strong>kapattık</strong>; adınızı, e-posta adresinizi, Play Games adınızı veya herhangi bir serbest metni asla göndermeyiz. Analitik veriler reklam için kullanılmaz ve satılmaz. AEA/Birleşik Krallık'ta analitik depolama, rıza penceresindeki seçiminize uyar (Google Consent Mode). Veriler bizim adımıza Google tarafından <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a> kapsamında işlenir ve Google Analytics'te en çok 14 ay tutulur. Oyunu kaldırmak uygulama kurulum kimliğini sıfırlar.</p>
+
     <h2>Seçenekleriniz ve rıza</h2>
     <ul>
-      <li><strong>AEA/Birleşik Krallık kullanıcıları:</strong> ilk açılışta gösterilen rıza penceresi (Google UMP), kişiselleştirilmiş reklam gösterilip gösterilmeyeceğini seçmenizi sağlar (GDPR gereği).</li>
+      <li><strong>AEA/Birleşik Krallık kullanıcıları:</strong> ilk açılışta gösterilen rıza penceresi (Google UMP), kişiselleştirilmiş reklam gösterilip gösterilmeyeceğini ve analitik verilerin saklanıp saklanmayacağını seçmenizi sağlar (GDPR gereği).</li>
       <li><strong>Tüm kullanıcılar:</strong> Android Ayarlar → Gizlilik → Reklamlar bölümünden Reklam Kimliğinizi sıfırlayabilir/silebilir ve reklam kişiselleştirmesini kapatabilirsiniz.</li>
       <li>Play Games ile giriş isteğe bağlıdır; oyun girişsiz de oynanabilir.</li>
       <li>Bu oyundaki reklamlar <strong>genel kitleye uygun içerik derecelendirmesi (G)</strong> ile sınırlandırılmıştır.</li>
@@ -150,7 +170,7 @@
 
     <h2>İzinler</h2>
     <ul>
-      <li><strong>Internet / Ağ durumu</strong> — ilerlemeyi kaydetmek ve reklamları yüklemek için.</li>
+      <li><strong>Internet / Ağ durumu</strong> — ilerlemeyi kaydetmek, reklamları yüklemek ve oyun analitiğini göndermek için.</li>
       <li><strong>Titreşim</strong> — oyun sırasında dokunsal geri bildirim için.</li>
       <li><strong>Reklam Kimliği</strong> — yukarıda açıklandığı gibi AdMob tarafından kullanılır.</li>
     </ul>
